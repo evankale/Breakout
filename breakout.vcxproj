@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\engine\Bitmap.h" />
+    <ClInclude Include="src\engine\DrawWindow.h" />
+    <ClInclude Include="src\engine\Global.h" />
+    <ClInclude Include="src\engine\Render.h" />
+    <ClInclude Include="src\engine\RenderObject.h" />
+    <ClInclude Include="src\engine\ResourceLoader.h" />
+    <ClInclude Include="src\game\Ball.h" />
+    <ClInclude Include="src\game\Brick.h" />
+    <ClInclude Include="src\game\CPUPaddle.h" />
+    <ClInclude Include="src\game\Game.h" />
+    <ClInclude Include="src\game\GameOverScreen.h" />
+    <ClInclude Include="src\game\Item.h" />
+    <ClInclude Include="src\game\Menu.h" />
+    <ClInclude Include="src\game\Notification.h" />
+    <ClInclude Include="src\game\PlayerPaddle.h" />
+    <ClInclude Include="src\game\ScoreKeeper.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\engine\Bitmap.cpp" />
+    <ClCompile Include="src\engine\DrawWindow_Win32.cpp" />
+    <ClCompile Include="src\engine\Global.cpp" />
+    <ClCompile Include="src\engine\Render.cpp" />
+    <ClCompile Include="src\engine\ResourceLoader.cpp" />
+    <ClCompile Include="src\game\Ball.cpp" />
+    <ClCompile Include="src\game\Brick.cpp" />
+    <ClCompile Include="src\game\CPUPaddle.cpp" />
+    <ClCompile Include="src\game\Game.cpp" />
+    <ClCompile Include="src\game\GameOverScreen.cpp" />
+    <ClCompile Include="src\game\Item.cpp" />
+    <ClCompile Include="src\game\Main.cpp" />
+    <ClCompile Include="src\game\Menu.cpp" />
+    <ClCompile Include="src\game\Notification.cpp" />
+    <ClCompile Include="src\game\PlayerPaddle.cpp" />
+    <ClCompile Include="src\game\ScoreKeeper.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9D20CCB6-FF20-4BE0-9252-FCA55AEBA307}</ProjectGuid>
+    <RootNamespace>breakout</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\src</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>.\src</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
